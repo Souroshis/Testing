@@ -1,0 +1,1476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Online Shopping</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body,td,th {
+	color: #000000;
+}
+body {
+	background-color:#D9ECFF;
+}
+#Layer1 {
+	position:absolute;
+	width:644px;
+	height:37px;
+	z-index:1;
+	left: 330px;
+	top: 21px;
+	background-color: #E4E4E4;
+}
+#Layer2 {
+	position:absolute;
+	width:607px;
+	height:24px;
+	z-index:2;
+	left: 383px;
+	top: 236px;
+}
+.style1 {font-weight: bold}
+-->
+</style>
+<style>
+#menu{
+padding:0;margin:0;
+font-family:"Bookman Old Style";
+font-weight:bold;
+list-style:none;
+position:relative;
+display:table-cell;
+}
+#menu li{
+float:left;
+padding:right;
+position:relative;
+}
+#menu li a{
+color:#009999;
+}
+#menu li a:hover{
+color:#000000;
+}
+#menuH
+{
+    /* You will get totally diffrent menu alignment and layout by setting following margin, width, and float with different values.
+    For detailed instruction please visit www.menucool.com/horizontal/change-menu-alignment  */
+    margin: 0; width: 100%; float:none;
+    /*following "behavior" works for IE6, IE7, and IE8. Other browsers will ignore it.*/
+    /*Note: Unlike image file, htc file path is relative to the page, not this CSS file.*/
+    behavior: url("/horizontal/menuh/cssmenu.htc");
+    height: 36px;
+    background: #D4D4D4 url(bg.gif) repeat-x 0 0;
+    border: 1px solid #BBB;
+    position:relative;/*! for IE htc*/
+    z-index:4;/*H2*/
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+}
+
+.style2 {color: #009999}
+.style3 {color: #009999; font-weight: bold; }
+</style>
+<style>
+.menuH
+{
+    /* You will get totally diffrent menu alignment and layout by setting following margin, width, and float with different values.
+    For detailed instruction please visit www.menucool.com/horizontal/change-menu-alignment  */
+    margin: 0; width: 100%; float:none;
+    /*following "behavior" works for IE6, IE7, and IE8. Other browsers will ignore it.*/
+    /*Note: Unlike image file, htc file path is relative to the page, not this CSS file.*/
+    behavior: url("/horizontal/menuh/cssmenu.htc");
+    height:30px;
+    background-color:#5EAEAE;
+    border: 1px solid #BBB;
+    position:relative;/*! for IE htc*/
+    z-index:4;/*H2*/
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+}
+
+.menuH li
+{
+    padding: 0;
+    /*margin: 0;
+    display: block; TODO: I am testing them if they can be removed. If can, remove them.*/
+    float: left;
+    height: 36px;
+    position: relative;/*move it into .menuH if you want submenu to be positioned relative to the whole menu instead of this li element*/
+}
+.menuH li:hover, .menuH li.onhover
+{
+    background: white url(bg.gif) repeat-x 0 -48px;
+}
+
+ul.menuH a
+{
+    padding: 0 30px;
+    line-height: 36px; /*Note: keep this value the same as the height of .menuH and .menuH li */
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+}
+.menuH a:hover
+{
+    color: red;
+}
+.menuH a.arrow
+{
+    background: url(arrow.gif) no-repeat right center;
+}
+.menuH ul a.arrow
+{
+    background: url(right.gif) no-repeat 97% center;
+}
+ 
+        
+/*Used to align a top-level item to the right*/        
+.menuH .menuRight
+{
+    float: right;
+    margin-right: 0px;
+}
+        
+/*for the top-level separators*/
+.menuH li.separator
+{
+    font-size:0;
+    overflow:hidden;
+    border-left:1px solid #F7F7F7;
+    border-right:1px solid #BBBBBB;
+}
+               
+        
+/*######sub level###########*/
+        
+ul.menuH ul
+{
+    width:200px;
+    position: absolute;
+    left: -9999px;
+    border: 1px solid #DDD;
+    border-top: 0; 
+    background-color:#E6E6E6;    
+    text-align: left;
+    list-style: none; margin: 0;  
+    /*Following 1px(padding-right) will determine how much it is overlapped by the sub-sub-menu */
+    padding: 0 1px 10px 0;   
+}
+
+.menuH li li
+{
+    float: none;
+    white-space:nowrap;
+    height: 26px;
+}
+.menuH li li:hover, .menuH li li.onhover
+{
+    background:#f7f7f7;
+}
+.menuH ul a
+{
+    padding: 0 20px;
+    line-height: 26px;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #0066CC;
+    text-align: left;
+}
+
+.menuH ul a:hover
+{
+    color:#00CCFF;
+}
+
+.menuH li:hover ul, .menuH li.onhover ul
+{
+    left: -1px;/*Use this property to change offset of the dropdown*/
+    top: auto;
+}
+
+.menuH li:hover .dropToLeft, .menuH li.onhover .dropToLeft
+{
+    left:auto;
+    right:auto;
+    top:auto;
+}
+.menuH ul ul
+{
+    border-top: 1px solid #DDD;
+}
+
+.menuH li:hover ul ul, .menuH li:hover ul ul ul, .menuH li:hover ul ul ul ul,
+.menuH li.onhover ul ul, .menuH li.onhover ul ul ul, .menuH li.onhover ul ul ul ul
+{
+    left: -9999px;
+    top:0;
+}
+
+.menuH li li:hover ul, .menuH li li li:hover ul, .menuH li li li li:hover ul,
+.menuH li li.onhover ul, .menuH li li li.onhover ul, .menuH li li li li.onhover ul
+{
+    left: 200px;
+}
+        
+/*####### special effects ##########*/
+        
+.decor1 
+{
+    -moz-border-radius: 3px; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari and Chrome */
+    border-radius: 3px; /* Opera 10.5+, future browsers, and now also our behavior htc file */
+
+    -moz-box-shadow: 0px 1px 4px #eee; /* Firefox */
+    -webkit-box-shadow: 0px 1px 4px #eee; /* Safari and Chrome */
+    box-shadow: 0px 1px 4px #eee; /* Opera 10.5+, future browsers and IE6+ using our behavior htc file */
+            
+}
+.menuH ul 
+{
+    -moz-border-radius: 0px 0px 4px 4px;
+    -webkit-border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
+
+    -moz-box-shadow: 0px 6px 6px #CCC;
+    -webkit-box-shadow: 0px 6px 6px #CCC;
+    box-shadow: 0px 6px 6px #CCC;  
+    
+    /*for older IE browsers, the htc file fix will disable this feature when box-shadow was also applied.*/
+    filter:alpha(opacity=90);
+    opacity: 0.90;  
+            
+    /* Gradient background */
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#EEEEEE)); 
+}
+body {
+	background-color:#D9ECFF;
+	background-image: url(white1.jpg);
+}
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('images%20(6).jpg')">
+<span class="logo"></span>
+</div>
+</div>
+</div>
+<span class="logo"><a href=""><img src="flamingo3.png" alt="Flamingo Online Shopping" width="288" height="108"/></a></span></div>
+<span class="logo"></span>
+</div>
+<span class="logo"> <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images%20(6).jpg',1)"></a></span>
+</div>
+<span class="logo"></span><span class="logo"></span>
+</div>
+</div>
+<span class="logo"></span>
+<div class="header">
+<div class="logo"> 
+    <div id="Layer1">
+	<form name="form1" id="form1" method="post" action="">
+      <span class="style1">
+      <label><font color="#009999"> Search  </font></label>
+      </span>
+<input name="q" type="text" value="" size="70" maxlength="70" />
+     <input type="submit" name="Submit" value="GO" />
+    </form>
+  </div>
+  <div id="Layer3" style="position:absolute; width:478px; height:24px; z-index:3; top: 68px; left: 333px;">
+	<ul id="menu">
+	<li><a href="HomePage.php"> Home </a>|</li>
+	<li> <a href="AboutUs.php"> About Us </a>|</li>
+	<li> <a href="CustomerSignUp.php"> Sign Up </a>|</li>
+	<li> <a href="CustomerLogin.php"> Login </a>|</li>
+	<li> <a href="Payment.php"> Payment </a>|</li>
+	<li> <a href="contactus.php"> Contact Us </a></li>
+	</ul>
+  </div>
+    <div id="Layer4" style="position:absolute; width:320px; height:44px; z-index:4; left: 977px; top: 21px; color: #009999;">
+	<div class="service style2">
+	  <p><a href="#" class="style3">24x7 Customer Care</a> |
+	    <a href="#" class="style2"><strong>Track Order</strong></a> |
+        <a href="#" class="style2"><strong>Cart</strong></a>	<img src="images.jpg" width="42" height="32" /><br />
+      </p>
+	  </div>
+  </div>
+  <div class="wrapper">    </div>
+</div>
+    <ul class="menuH decor1">
+    <li style="margin-left:120px;">
+                    <a class="arrow">MENS</a>
+                <ul>
+				<li><a class="arrow">Clothings</a>
+				<ul>
+				Formals::
+                <li><a href="MenShirts.php">Shirts</a></li>
+					 <li><a href="#">Trousers</a></li>
+					  <li><a href="#">Formal Tie</a></li>
+					   <li><a href="#">Suits & Blazers</a></li>
+					    <li><a href="#">Accessories</a></li>
+		
+					   Informals & Casuals::
+					    <li><a href="#">T-shirts</a></li>
+                        <li><a href="#">Cargos & 3/4th shorts</a></li>
+						 <li><a href="#">Pants</a></li>
+						  <li><a href="#">Jeans</a></li>
+						   <li><a href="#">Casuals Shirts</a></li>
+						  
+							<li><a href="#">Accessories</a></li>
+							Party Wear::
+                            <li><a href="#">Party Wear Shirts</a></li>
+                            <li><a href="#">Trousers</a></li>
+                            <li><a href="#">Tie</a></li>
+                            <li><a href="#">Accessories</a></li>
+							Others::
+                            <li><a href="#">Sports Wears</a></li>
+							 <li><a href="#">Inner & Sleep Wears</a></li>
+							 <li><a href="#">Ethic Wears</a></li>
+							  <li><a href="#">Winter Wears</a></li>
+				  </ul>
+				  </li>
+					<li><a class="arrow">Footwear</a>
+
+				<ul>
+                <li><a href="#">Sports Shoes</a></li>
+					 <li><a href="#">Casuals Shoes</a></li>
+					  <li><a href="#">Formal Shoes</a></li>
+					   <li><a href="#">Sandels & Slippers</a></li>
+					    <li><a href="#">Sneakers</a></li>	
+					    <li><a href="#">Running Shoes</a></li>
+                        <li><a href="#">Loafers</a></li>
+						 <li><a href="#">Boots</a></li>
+						  <li><a href="#">Shoe Care</a></li>
+						   <li><a href="#">499 store</a></li>
+						   <li><a href="#">View All</a></li>
+					  </ul>
+				  </li>
+                       
+                    	
+					<li><a class="arrow">Watches</a>
+                <ul>
+                    <li><a href="#">FastTrack</a></li>
+                    <li><a href="#">Casio</a></li>
+                    <li><a href="#">Sonata</a></li>
+					<li><a href="#">Titan</a></li>
+					<li><a href="#">Fossil</a></li>
+					<li><a href="#">Timex</a></li>
+					<li><a href="#">Maxima</a></li>
+					<li><a href="#">Citizen</a></li>
+					<li><a href="#">View All..</a></li>
+                </ul>
+				</li>           
+    
+	<li><a class="arrow">Men's Accessories</a>
+                <ul>
+                    <li><a href="#">Chains</a></li>
+                    <li><a href="#">Bracelets</a></li>
+					<li><a href="#">WristBands</a></li>
+					<li><a href="#">Cufflins</a></li>
+                </ul>
+            </li>
+            <li><a class="arrow">Bags,Belt & Wallets</a>
+                <ul>Bags::
+                    <li><a href="#">Backpacks</a></li>
+                    <li><a href="#">Laptop Bags</a></li>
+                    <li><a href="#">Messenger Bags</a></li>
+                    <li><a href="#">Duffel Bags</a></li>
+    <hr>
+
+			   <li><a href="#"> Belts-></a></li>
+			   <li><a href="#">Wallets-></a></li>
+			   </ul>
+    </li>
+    <li><a class="arrow">Sunglasses</a>
+        <ul>
+		<li><a href="#">Avitor</a></li>
+		<li><a href="#">Fasttrack</a></li>
+		<li><a href="#">Wayfarers</a></li>
+		<li><a href="#">View all..</a></li>
+		</ul>
+		</li>
+    <li><a class="arrow">Fragrances</a>
+        <ul>
+            <li><a href="#">Deodrants</a></li>
+            <li><a href="#">Perfumes</a></li>
+            <li><a href="#">View all..</a></li>
+        </ul>
+     </li>
+	 </ul>
+	 <li><a class="arrow">WOMENS</a>
+        <ul>
+		<li><a class="arrow">Clothings</a>
+		<ul>
+            <li><a class="arrow">Ethenic Wear</a>
+			   <ul>
+		       <li><a href="wsalwoar.php">Salwoar Suits</a>
+			   <li><a href="#">Kurtis</a>
+		       </ul> 
+			</li>
+			<li><a class="arrow">Shirts,Top & Tunics</a>
+			   <ul>
+		       <li><a href="wshirts.php">Shirts</a>
+			   <li><a href="wtops.php">Tops</a> 
+		       </ul>
+			</li>
+			<li><a href="lahengas.php">Lahengas</a></li>
+			<li><a href="sarees.php">Sarees</a></li>
+			<li><a href="wjeans.php">Jeans</a></li>
+			</ul>
+		</li>
+		    <li><a href="wfootwares.php">Footwear</a></li>
+		    <li><a class="arrow">Fragrances</a>
+			   <ul>
+			   <li><a href="Deos.php">Deodrants</a></li>
+               <li><a href="Perfumes.php">Perfumes</a></li>
+               </ul>	
+		    </li>
+		    <li><a href="wbags.php">Bags</a></li>
+		    <li><a class="arrows">Jewellery</a>
+		       <ul>
+		       <li><a href="wearings.php">Earrings</a></li>
+		       <li><a href="#">Pendant & Lockets</a></li>
+	           </ul>
+			 </li>
+	   </ul>
+</li>
+	   <li><a class="arrow">ELECTRONICS</a>
+	     <ul>
+	         <li><a class="arrow">Mobile</a>
+			  <ul>
+			  <li><a href="Samsung.php">Samsung</a></li>
+			  <li><a href="Apple.php">Apple</a></li>
+			  <li><a href="Nokia.php">Nokia</a></li>
+			  </ul>
+			 </li>
+			 <li><a class="arrow">Tablets</a>
+			 <ul>
+			 <li><a href="AppleTablets.php">ipad</a></li>
+			 <li><a href="Nexus7Tablets.php">Nexus 7</a></li>
+			 <li><a href="SamsungTablets.php">Samsung</a></li>
+			 </ul>
+			 </li>
+			 <li><a class="arrow">Laptop</a>
+			 <ul>
+			 <li><a href="AppleLaptops.php">Apple</a></li>
+			 <li><a href="HPLaptops.php">HP</a></li>
+			 <li><a href="DellLaptops.php">Dell</a></li>
+			 </ul>
+			 </li>
+			 <li><a class="arrow">Computer Accessories</a>
+			 <ul>
+			 <li><a href="Pendrives.php">Pendrives</a></li>
+			 </ul>
+			 <li><a class="arrow">Health Care Devices</a>
+			 <ul>
+			 <li><a href="bpmachines.php">Blood Pressure Monitor</a></li>
+			 </ul>
+			 </li>
+			 <li><a class="arrow">Cameras</a>
+			 <ul>
+			 <li><a href="CanonCameras.php">Canon</a></li>
+	         <li><a href="NikonCameras.php">Nikon</a></li>
+			 <li><a href="SonyCameras.php">Sony</a></li>
+			 </ul>
+			 </li>
+	   </ul>
+	   </li>
+	   <li><a class="arrow">BOOKS & MEDIA</a>
+	      <ul>
+		  <li><a class="arrow">Books</a>
+		   <ul>
+		    <li><a href="EngineeringBooks.php">Engineering Books</a></li>
+		   </ul>
+		  <li><a class="arrow">Indian Writing</a>
+		    <ul>
+		    <li><a href="FictionBooks.php">Fiction</a></li>
+			<li><a href="RomanceBooks.php">Romance</a></li>
+			<li><a href="ThrillerBooks.php">Thriller</a></li>
+			<li><a href="ClassicsBooks.php">Classics</a></li>
+			<li><a href="MurderMysteriesBooks.php">Murder Mystery</a></li>
+		    </ul>
+		  </li>
+		   <li><a href="ebooks.php">eBooks</a></li>
+		  <li><a class="arrow">Music</a>
+		    <ul>
+			<li><a href="#">Pre-Orders</a></li>
+			<li><a href="#">New Releases</a></li>
+			<li><a href="#">Devotional & Spiritual</a></li>
+			<li><a href="#">Bollwood Retro</a></li>
+			<li><a href="#">Vinyls</a></li>
+			</ul>
+		  </li>
+		  <li><a class="arrow">Movies & TV Sows</a>
+		    <ul>
+			<li><a href="#">Pre-Orders</a></li>
+			<li><a href="#">New Releases</a></li>
+			<li><a href="HindiMovies.php">Hindi Movies</a></li>
+			<li><a href="EnglishMovies.php">English Movies</a></li>
+			<li><a href="#">Health & Wellness</a></li>
+			<li><a href="#">Documentries</a></li>
+			<li><a href="#">Box Sets & Gift Sets</a></li>
+			<li><a href="#">DVD & Blu Ray Players</a></li>
+			</ul>
+		  </li>
+		  <li><a class="arrow">Games</a>
+		    <ul>
+			<li><a href="#">Pre-Orders</a></li>
+			<li><a href="#">New Releases</a></li>
+			<li><a href="#">PC Games</a></li>
+			<li><a href="#">PS3 Games</a></li>
+			<li><a href="#">Xbox 360 Games</a></li>
+			<li><a href="#">PS2 Games</a></li>
+			<li><a href="#">Featured Games</a></li>
+			<li><a href="#">IGN Top Rated</a></li>
+			<li><a href="#">Collectors Corner</a></li>
+			</ul>
+		  </li>
+		  <li><a class="arrow">Stationery</a>
+		    <ul>
+			<li><a href="#">Pens</a></li>
+			<li><a href="#">Calculators</a></li>
+			<li><a href="#">School Supplies</a></li>
+			<li><a href="#">Art Supplies</a></li>
+			<li><a href="#">Diaries & Notebooks</a></li>
+			<li><a href="#">Deals Store</a></li>
+			<li><a href="#">Gifting</a></li>
+			</ul>
+		  </li>
+		  <li><a class="arrow">Office Electronics</a>
+		  </li>
+	     </ul>
+	   </li>
+	   <li><a class="arrow">HOME & KITCHEN</a>
+	      <ul>
+		    <li><a class="arrow">Home Furnishing</a>
+			   <ul>
+			   <li><a href="#">New Arrivals</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Bed</a>
+			   <ul>
+			   <li><a href="#">Bedsheets</a></li>
+			   <li><a href="#">Blankets</a></li>
+			   <li><a href="#">Duvet Covers</a></li>
+			   <li><a href="#">Bed Covers</a></li>
+			   <li><a href="#">Pillows</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Kitchen</a>
+			   <ul>
+			   <li><a href="#">Table Covers</a></li>
+			   <li><a href="#">Table Placemats</a></li>
+			   <li><a href="#">Table Runners</a></li>
+			   <li><a href="#">Napkins</a></li>
+			   <li><a href="#">Kitchen linen Sets</a></li>
+			   <li><a href="#">Aprons</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Bath</a>
+			   <ul>
+			   <li><a href="#">Bath Towels</a></li>
+			   <li><a href="#">Mats</a></li>
+			   <li><a href="#">Curtains</a></li>
+			   <li><a href="#">Laundry Baskets</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Living</a>
+			   <ul>
+			   <li><a href="#">Cushion Pillow Covers</a></li>
+			   <li><a href="#">Curtains</a></li>
+			   <li><a href="#">Carpet Rugs</a></li>
+			   <li><a href="#">Diwan Sets</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Home Appliances</a>
+			   <ul>
+			   <li><a href="#">Vacuum Cleaners</a></li>
+			   <li><a href="#">Lightings</a></li>
+			   <li><a href="#">Water Purifiers</a></li>
+			   <li><a href="#">Irons</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Tools & Home Improvement</a>
+			   <ul>
+			   <li><a href="#">Hand Tools</a></li>
+			   <li><a href="#">Power Tools</a></li>
+			   <li><a href="#">Scissors & Paper Cutters</a></li>
+			   <li><a href="#">Crafting & Engraving Tools</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Kitchen Appliances</a>
+			   <ul>
+			   <li><a href="#">Sandwich and Rotimakers</a></li>
+			   <li><a href="#">Induction Cooktops</a></li>
+			   <li><a href="#">Mixer/Juicer/Grinder</a></li>
+			   <li><a href="#">Electric Cooker</a></li>
+			   <li><a href="#">Food Processor</a></li>
+			   <li><a href="#">Pop-up Toasters</a></li>
+			   <li><a href="#">Coffee Makers</a></li>
+			   <li><a href="#">Electric Kettle</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Home Shopping Fiesta</a>
+			</li>
+		  </ul>
+	   </li>
+	   <li><a class="arrow">MORE STORES</a>
+	     <ul>
+		    <li><a class="arrow">Sports & Fitness</a>
+			   <ul>
+			     <li><a class="arrow">Team Sports</a>
+			        <ul>
+			        <li><a href="#">Basketball</a></li>
+			        <li><a href="#">Cricket</a></li>
+			        <li><a href="#">Hockey</a></li>
+			        <li><a href="#">VolleyBall</a></li>
+			        <li><a href="#">Other Ball Sports</a></li>
+			        </ul>
+			     </li>
+			     <li><a class="arrow">Indoor Games</a>
+			        <ul>
+			        <li><a href="#">Board Games</a></li>
+			        <li><a href="#">Chess</a></li>
+					<li><a href="#">Darts</a></li>
+			        </ul>
+			     </li>
+				 <li><a class="arrow">Racqet Sports</a>
+				    <ul>
+					<li><a href="#">Badminton</a></li>
+					<li><a href="#">Squash</a></li>
+					<li><a href="#">Table Tennis</a></li>
+					<li><a href="#">Tennis</a></li>
+					</ul>
+				 </li>
+				 <li><a class="arrow">Outdoor Adventure</a>
+				    <ul>
+					<li><a href="#">Camping & Hiking</a></li>
+					<li><a href="#">Cycling</a></li>
+					<li><a href="#">Running</a></li>
+					</ul>
+				 </li>
+				 <li><a class="arrow">Motorsports</a>
+				 </li>
+				 <li><a class="arrow">Other Sports</a>
+				    <ul>
+					<li><a href="#">Boxing</a></li>
+					<li><a href="#">Golf</a></li>
+					<li><a href="#">Skating</a></li>
+					<li><a href="#">Swimming</a></li>
+					</ul>
+				 </li>
+				 <li><a class="arrow">Fitness</a>
+				    <ul>
+					<li><a href="#">Mats</a></li>
+					<li><a href="#">Balls</a></li>
+					<li><a href="#">Fitness Bands</a></li>
+					<li><a href="#">Strength Training</a></li>
+					<li><a href="#">Gloves</a></li>
+					</ul>
+				 </li>
+	          </ul>
+			</li>
+			<li><a class="arrow">Luggage and Travel</a>
+			   <ul>
+			   <li><a href="#">Duffel Bags</a></li>
+			   <li><a href="#">Rucksacks</a></li>
+			   <li><a href="#">Suitcases</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Clocks</a>
+			</li>
+			<li><a class="arrow">Travel accessories</a>
+			</li>
+			<li><a class="arrow">Other accessories</a>
+			   <ul>
+			   <li><a href="#">Cufflins</a></li>
+			   <li><a href="#">Suspenders</a></li>
+			   <li><a href="#">Card Holders</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Posters</a>
+			</li>
+		 </ul>
+	   </li>
+	    </ul>
+		 <!-- TemplateBeginEditable name="EditRegion3" --> <!-- TemplateEndEditable -->
+</body>
+</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Online Shopping</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<style type="text/css">
+<!--
+body,td,th {
+	color: #000000;
+}
+body {
+	background-color:#D9ECFF;
+}
+#Layer1 {
+	position:absolute;
+	width:644px;
+	height:37px;
+	z-index:1;
+	left: 330px;
+	top: 21px;
+	background-color: #E4E4E4;
+}
+#Layer2 {
+	position:absolute;
+	width:607px;
+	height:24px;
+	z-index:2;
+	left: 383px;
+	top: 236px;
+}
+.style1 {font-weight: bold}
+-->
+</style>
+<style>
+#menu{
+padding:0;margin:0;
+font-family:"Bookman Old Style";
+font-weight:bold;
+list-style:none;
+position:relative;
+display:table-cell;
+}
+#menu li{
+float:left;
+padding:right;
+position:relative;
+}
+#menu li a{
+color:#009999;
+}
+#menu li a:hover{
+color:#000000;
+}
+#menuH
+{
+    /* You will get totally diffrent menu alignment and layout by setting following margin, width, and float with different values.
+    For detailed instruction please visit www.menucool.com/horizontal/change-menu-alignment  */
+    margin: 0; width: 100%; float:none;
+    /*following "behavior" works for IE6, IE7, and IE8. Other browsers will ignore it.*/
+    /*Note: Unlike image file, htc file path is relative to the page, not this CSS file.*/
+    behavior: url("/horizontal/menuh/cssmenu.htc");
+    height: 36px;
+    background: #D4D4D4 url(bg.gif) repeat-x 0 0;
+    border: 1px solid #BBB;
+    position:relative;/*! for IE htc*/
+    z-index:4;/*H2*/
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+}
+
+.style2 {color: #009999}
+.style3 {color: #009999; font-weight: bold; }
+</style>
+<style>
+.menuH
+{
+    /* You will get totally diffrent menu alignment and layout by setting following margin, width, and float with different values.
+    For detailed instruction please visit www.menucool.com/horizontal/change-menu-alignment  */
+    margin: 0; width: 100%; float:none;
+    /*following "behavior" works for IE6, IE7, and IE8. Other browsers will ignore it.*/
+    /*Note: Unlike image file, htc file path is relative to the page, not this CSS file.*/
+    behavior: url("/horizontal/menuh/cssmenu.htc");
+    height:30px;
+    background-color:#5EAEAE;
+    border: 1px solid #BBB;
+    position:relative;/*! for IE htc*/
+    z-index:4;/*H2*/
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+}
+
+.menuH li
+{
+    padding: 0;
+    /*margin: 0;
+    display: block; TODO: I am testing them if they can be removed. If can, remove them.*/
+    float: left;
+    height: 36px;
+    position: relative;/*move it into .menuH if you want submenu to be positioned relative to the whole menu instead of this li element*/
+}
+.menuH li:hover, .menuH li.onhover
+{
+    background: white url(bg.gif) repeat-x 0 -48px;
+}
+
+ul.menuH a
+{
+    padding: 0 30px;
+    line-height: 36px; /*Note: keep this value the same as the height of .menuH and .menuH li */
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+}
+.menuH a:hover
+{
+    color: red;
+}
+.menuH a.arrow
+{
+    background: url(arrow.gif) no-repeat right center;
+}
+.menuH ul a.arrow
+{
+    background: url(right.gif) no-repeat 97% center;
+}
+ 
+        
+/*Used to align a top-level item to the right*/        
+.menuH .menuRight
+{
+    float: right;
+    margin-right: 0px;
+}
+        
+/*for the top-level separators*/
+.menuH li.separator
+{
+    font-size:0;
+    overflow:hidden;
+    border-left:1px solid #F7F7F7;
+    border-right:1px solid #BBBBBB;
+}
+               
+        
+/*######sub level###########*/
+        
+ul.menuH ul
+{
+    width:200px;
+    position: absolute;
+    left: -9999px;
+    border: 1px solid #DDD;
+    border-top: 0; 
+    background-color:#E6E6E6;    
+    text-align: left;
+    list-style: none; margin: 0;  
+    /*Following 1px(padding-right) will determine how much it is overlapped by the sub-sub-menu */
+    padding: 0 1px 10px 0;   
+}
+
+.menuH li li
+{
+    float: none;
+    white-space:nowrap;
+    height: 26px;
+}
+.menuH li li:hover, .menuH li li.onhover
+{
+    background:#f7f7f7;
+}
+.menuH ul a
+{
+    padding: 0 20px;
+    line-height: 26px;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #0066CC;
+    text-align: left;
+}
+
+.menuH ul a:hover
+{
+    color:#00CCFF;
+}
+
+.menuH li:hover ul, .menuH li.onhover ul
+{
+    left: -1px;/*Use this property to change offset of the dropdown*/
+    top: auto;
+}
+
+.menuH li:hover .dropToLeft, .menuH li.onhover .dropToLeft
+{
+    left:auto;
+    right:auto;
+    top:auto;
+}
+.menuH ul ul
+{
+    border-top: 1px solid #DDD;
+}
+
+.menuH li:hover ul ul, .menuH li:hover ul ul ul, .menuH li:hover ul ul ul ul,
+.menuH li.onhover ul ul, .menuH li.onhover ul ul ul, .menuH li.onhover ul ul ul ul
+{
+    left: -9999px;
+    top:0;
+}
+
+.menuH li li:hover ul, .menuH li li li:hover ul, .menuH li li li li:hover ul,
+.menuH li li.onhover ul, .menuH li li li.onhover ul, .menuH li li li li.onhover ul
+{
+    left: 200px;
+}
+        
+/*####### special effects ##########*/
+        
+.decor1 
+{
+    -moz-border-radius: 3px; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari and Chrome */
+    border-radius: 3px; /* Opera 10.5+, future browsers, and now also our behavior htc file */
+
+    -moz-box-shadow: 0px 1px 4px #eee; /* Firefox */
+    -webkit-box-shadow: 0px 1px 4px #eee; /* Safari and Chrome */
+    box-shadow: 0px 1px 4px #eee; /* Opera 10.5+, future browsers and IE6+ using our behavior htc file */
+            
+}
+.menuH ul 
+{
+    -moz-border-radius: 0px 0px 4px 4px;
+    -webkit-border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
+
+    -moz-box-shadow: 0px 6px 6px #CCC;
+    -webkit-box-shadow: 0px 6px 6px #CCC;
+    box-shadow: 0px 6px 6px #CCC;  
+    
+    /*for older IE browsers, the htc file fix will disable this feature when box-shadow was also applied.*/
+    filter:alpha(opacity=90);
+    opacity: 0.90;  
+            
+    /* Gradient background */
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#EEEEEE)); 
+}
+body {
+	background-color:#D9ECFF;
+	background-image: url(white1.jpg);
+}
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('images%20(6).jpg')">
+<span class="logo"></span>
+</div>
+</div>
+</div>
+<span class="logo"><a href=""><img src="flamingo3.png" alt="Flamingo Online Shopping" width="288" height="108"/></a></span></div>
+<span class="logo"></span>
+</div>
+<span class="logo"> <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images%20(6).jpg',1)"></a></span>
+</div>
+<span class="logo"></span><span class="logo"></span>
+</div>
+</div>
+<span class="logo"></span>
+<div class="header">
+<div class="logo"> 
+    <div id="Layer1">
+	<form name="form1" id="form1" method="post" action="">
+      <span class="style1">
+      <label><font color="#009999"> Search  </font></label>
+      </span>
+<input name="q" type="text" value="" size="70" maxlength="70" />
+     <input type="submit" name="Submit" value="GO" />
+    </form>
+  </div>
+  <div id="Layer3" style="position:absolute; width:478px; height:24px; z-index:3; top: 68px; left: 333px;">
+	<ul id="menu">
+	<li><a href="HomePage.php"> Home </a>|</li>
+	<li> <a href="AboutUs.php"> About Us </a>|</li>
+	<li> <a href="CustomerSignUp.php"> Sign Up </a>|</li>
+	<li> <a href="CustomerLogin.php"> Login </a>|</li>
+	<li> <a href="Payment.php"> Payment </a>|</li>
+	<li> <a href="contactus.php"> Contact Us </a></li>
+	</ul>
+  </div>
+    <div id="Layer4" style="position:absolute; width:320px; height:44px; z-index:4; left: 977px; top: 21px; color: #009999;">
+	<div class="service style2">
+	  <p><a href="#" class="style3">24x7 Customer Care</a> |
+	    <a href="#" class="style2"><strong>Track Order</strong></a> |
+        <a href="#" class="style2"><strong>Cart</strong></a>	<img src="images.jpg" width="42" height="32" /><br />
+      </p>
+	  </div>
+  </div>
+  <div class="wrapper">    </div>
+</div>
+    <ul class="menuH decor1">
+    <li style="margin-left:120px;">
+                    <a class="arrow">MENS</a>
+                <ul>
+				<li><a class="arrow">Clothings</a>
+				<ul>
+				Formals::
+                <li><a href="MenShirts.php">Shirts</a></li>
+					 <li><a href="#">Trousers</a></li>
+					  <li><a href="#">Formal Tie</a></li>
+					   <li><a href="#">Suits & Blazers</a></li>
+					    <li><a href="#">Accessories</a></li>
+		
+					   Informals & Casuals::
+					    <li><a href="#">T-shirts</a></li>
+                        <li><a href="#">Cargos & 3/4th shorts</a></li>
+						 <li><a href="#">Pants</a></li>
+						  <li><a href="#">Jeans</a></li>
+						   <li><a href="#">Casuals Shirts</a></li>
+						  
+							<li><a href="#">Accessories</a></li>
+							Party Wear::
+                            <li><a href="#">Party Wear Shirts</a></li>
+                            <li><a href="#">Trousers</a></li>
+                            <li><a href="#">Tie</a></li>
+                            <li><a href="#">Accessories</a></li>
+							Others::
+                            <li><a href="#">Sports Wears</a></li>
+							 <li><a href="#">Inner & Sleep Wears</a></li>
+							 <li><a href="#">Ethic Wears</a></li>
+							  <li><a href="#">Winter Wears</a></li>
+				  </ul>
+				  </li>
+					<li><a class="arrow">Footwear</a>
+
+				<ul>
+                <li><a href="#">Sports Shoes</a></li>
+					 <li><a href="#">Casuals Shoes</a></li>
+					  <li><a href="#">Formal Shoes</a></li>
+					   <li><a href="#">Sandels & Slippers</a></li>
+					    <li><a href="#">Sneakers</a></li>	
+					    <li><a href="#">Running Shoes</a></li>
+                        <li><a href="#">Loafers</a></li>
+						 <li><a href="#">Boots</a></li>
+						  <li><a href="#">Shoe Care</a></li>
+						   <li><a href="#">499 store</a></li>
+						   <li><a href="#">View All</a></li>
+					  </ul>
+				  </li>
+                       
+                    	
+					<li><a class="arrow">Watches</a>
+                <ul>
+                    <li><a href="#">FastTrack</a></li>
+                    <li><a href="#">Casio</a></li>
+                    <li><a href="#">Sonata</a></li>
+					<li><a href="#">Titan</a></li>
+					<li><a href="#">Fossil</a></li>
+					<li><a href="#">Timex</a></li>
+					<li><a href="#">Maxima</a></li>
+					<li><a href="#">Citizen</a></li>
+					<li><a href="#">View All..</a></li>
+                </ul>
+				</li>           
+    
+	<li><a class="arrow">Men's Accessories</a>
+                <ul>
+                    <li><a href="#">Chains</a></li>
+                    <li><a href="#">Bracelets</a></li>
+					<li><a href="#">WristBands</a></li>
+					<li><a href="#">Cufflins</a></li>
+                </ul>
+            </li>
+            <li><a class="arrow">Bags,Belt & Wallets</a>
+                <ul>Bags::
+                    <li><a href="#">Backpacks</a></li>
+                    <li><a href="#">Laptop Bags</a></li>
+                    <li><a href="#">Messenger Bags</a></li>
+                    <li><a href="#">Duffel Bags</a></li>
+    <hr>
+
+			   <li><a href="#"> Belts-></a></li>
+			   <li><a href="#">Wallets-></a></li>
+			   </ul>
+    </li>
+    <li><a class="arrow">Sunglasses</a>
+        <ul>
+		<li><a href="#">Avitor</a></li>
+		<li><a href="#">Fasttrack</a></li>
+		<li><a href="#">Wayfarers</a></li>
+		<li><a href="#">View all..</a></li>
+		</ul>
+		</li>
+    <li><a class="arrow">Fragrances</a>
+        <ul>
+            <li><a href="#">Deodrants</a></li>
+            <li><a href="#">Perfumes</a></li>
+            <li><a href="#">View all..</a></li>
+        </ul>
+     </li>
+	 </ul>
+	 <li><a class="arrow">WOMENS</a>
+        <ul>
+		<li><a class="arrow">Clothings</a>
+		<ul>
+            <li><a class="arrow">Ethenic Wear</a>
+			   <ul>
+		       <li><a href="wsalwoar.php">Salwoar Suits</a>
+			   <li><a href="#">Kurtis</a>
+		       </ul> 
+			</li>
+			<li><a class="arrow">Shirts,Top & Tunics</a>
+			   <ul>
+		       <li><a href="wshirts.php">Shirts</a>
+			   <li><a href="wtops.php">Tops</a> 
+		       </ul>
+			</li>
+			<li><a href="lahengas.php">Lahengas</a></li>
+			<li><a href="sarees.php">Sarees</a></li>
+			<li><a href="wjeans.php">Jeans</a></li>
+			</ul>
+		</li>
+		    <li><a href="wfootwares.php">Footwear</a></li>
+		    <li><a class="arrow">Fragrances</a>
+			   <ul>
+			   <li><a href="Deos.php">Deodrants</a></li>
+               <li><a href="Perfumes.php">Perfumes</a></li>
+               </ul>	
+		    </li>
+		    <li><a href="wbags.php">Bags</a></li>
+		    <li><a class="arrows">Jewellery</a>
+		       <ul>
+		       <li><a href="wearings.php">Earrings</a></li>
+		       <li><a href="#">Pendant & Lockets</a></li>
+	           </ul>
+			 </li>
+	   </ul>
+</li>
+	   <li><a class="arrow">ELECTRONICS</a>
+	     <ul>
+	         <li><a class="arrow">Mobile</a>
+			  <ul>
+			  <li><a href="Samsung.php">Samsung</a></li>
+			  <li><a href="Apple.php">Apple</a></li>
+			  <li><a href="Nokia.php">Nokia</a></li>
+			  </ul>
+			 </li>
+			 <li><a class="arrow">Tablets</a>
+			 <ul>
+			 <li><a href="AppleTablets.php">ipad</a></li>
+			 <li><a href="Nexus7Tablets.php">Nexus 7</a></li>
+			 <li><a href="SamsungTablets.php">Samsung</a></li>
+			 </ul>
+			 </li>
+			 <li><a class="arrow">Laptop</a>
+			 <ul>
+			 <li><a href="AppleLaptops.php">Apple</a></li>
+			 <li><a href="HPLaptops.php">HP</a></li>
+			 <li><a href="DellLaptops.php">Dell</a></li>
+			 </ul>
+			 </li>
+			 <li><a class="arrow">Computer Accessories</a>
+			 <ul>
+			 <li><a href="Pendrives.php">Pendrives</a></li>
+			 </ul>
+			 <li><a class="arrow">Health Care Devices</a>
+			 <ul>
+			 <li><a href="bpmachines.php">Blood Pressure Monitor</a></li>
+			 </ul>
+			 </li>
+			 <li><a class="arrow">Cameras</a>
+			 <ul>
+			 <li><a href="CanonCameras.php">Canon</a></li>
+	         <li><a href="NikonCameras.php">Nikon</a></li>
+			 <li><a href="SonyCameras.php">Sony</a></li>
+			 </ul>
+			 </li>
+	   </ul>
+	   </li>
+	   <li><a class="arrow">BOOKS & MEDIA</a>
+	      <ul>
+		  <li><a class="arrow">Books</a>
+		   <ul>
+		    <li><a href="EngineeringBooks.php">Engineering Books</a></li>
+		   </ul>
+		  <li><a class="arrow">Indian Writing</a>
+		    <ul>
+		    <li><a href="FictionBooks.php">Fiction</a></li>
+			<li><a href="RomanceBooks.php">Romance</a></li>
+			<li><a href="ThrillerBooks.php">Thriller</a></li>
+			<li><a href="ClassicsBooks.php">Classics</a></li>
+			<li><a href="MurderMysteriesBooks.php">Murder Mystery</a></li>
+		    </ul>
+		  </li>
+		   <li><a href="ebooks.php">eBooks</a></li>
+		  <li><a class="arrow">Music</a>
+		    <ul>
+			<li><a href="#">Pre-Orders</a></li>
+			<li><a href="#">New Releases</a></li>
+			<li><a href="#">Devotional & Spiritual</a></li>
+			<li><a href="#">Bollwood Retro</a></li>
+			<li><a href="#">Vinyls</a></li>
+			</ul>
+		  </li>
+		  <li><a class="arrow">Movies & TV Sows</a>
+		    <ul>
+			<li><a href="#">Pre-Orders</a></li>
+			<li><a href="#">New Releases</a></li>
+			<li><a href="HindiMovies.php">Hindi Movies</a></li>
+			<li><a href="EnglishMovies.php">English Movies</a></li>
+			<li><a href="#">Health & Wellness</a></li>
+			<li><a href="#">Documentries</a></li>
+			<li><a href="#">Box Sets & Gift Sets</a></li>
+			<li><a href="#">DVD & Blu Ray Players</a></li>
+			</ul>
+		  </li>
+		  <li><a class="arrow">Games</a>
+		    <ul>
+			<li><a href="#">Pre-Orders</a></li>
+			<li><a href="#">New Releases</a></li>
+			<li><a href="#">PC Games</a></li>
+			<li><a href="#">PS3 Games</a></li>
+			<li><a href="#">Xbox 360 Games</a></li>
+			<li><a href="#">PS2 Games</a></li>
+			<li><a href="#">Featured Games</a></li>
+			<li><a href="#">IGN Top Rated</a></li>
+			<li><a href="#">Collectors Corner</a></li>
+			</ul>
+		  </li>
+		  <li><a class="arrow">Stationery</a>
+		    <ul>
+			<li><a href="#">Pens</a></li>
+			<li><a href="#">Calculators</a></li>
+			<li><a href="#">School Supplies</a></li>
+			<li><a href="#">Art Supplies</a></li>
+			<li><a href="#">Diaries & Notebooks</a></li>
+			<li><a href="#">Deals Store</a></li>
+			<li><a href="#">Gifting</a></li>
+			</ul>
+		  </li>
+		  <li><a class="arrow">Office Electronics</a>
+		  </li>
+	     </ul>
+	   </li>
+	   <li><a class="arrow">HOME & KITCHEN</a>
+	      <ul>
+		    <li><a class="arrow">Home Furnishing</a>
+			   <ul>
+			   <li><a href="#">New Arrivals</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Bed</a>
+			   <ul>
+			   <li><a href="#">Bedsheets</a></li>
+			   <li><a href="#">Blankets</a></li>
+			   <li><a href="#">Duvet Covers</a></li>
+			   <li><a href="#">Bed Covers</a></li>
+			   <li><a href="#">Pillows</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Kitchen</a>
+			   <ul>
+			   <li><a href="#">Table Covers</a></li>
+			   <li><a href="#">Table Placemats</a></li>
+			   <li><a href="#">Table Runners</a></li>
+			   <li><a href="#">Napkins</a></li>
+			   <li><a href="#">Kitchen linen Sets</a></li>
+			   <li><a href="#">Aprons</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Bath</a>
+			   <ul>
+			   <li><a href="#">Bath Towels</a></li>
+			   <li><a href="#">Mats</a></li>
+			   <li><a href="#">Curtains</a></li>
+			   <li><a href="#">Laundry Baskets</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Living</a>
+			   <ul>
+			   <li><a href="#">Cushion Pillow Covers</a></li>
+			   <li><a href="#">Curtains</a></li>
+			   <li><a href="#">Carpet Rugs</a></li>
+			   <li><a href="#">Diwan Sets</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Home Appliances</a>
+			   <ul>
+			   <li><a href="#">Vacuum Cleaners</a></li>
+			   <li><a href="#">Lightings</a></li>
+			   <li><a href="#">Water Purifiers</a></li>
+			   <li><a href="#">Irons</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Tools & Home Improvement</a>
+			   <ul>
+			   <li><a href="#">Hand Tools</a></li>
+			   <li><a href="#">Power Tools</a></li>
+			   <li><a href="#">Scissors & Paper Cutters</a></li>
+			   <li><a href="#">Crafting & Engraving Tools</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Kitchen Appliances</a>
+			   <ul>
+			   <li><a href="#">Sandwich and Rotimakers</a></li>
+			   <li><a href="#">Induction Cooktops</a></li>
+			   <li><a href="#">Mixer/Juicer/Grinder</a></li>
+			   <li><a href="#">Electric Cooker</a></li>
+			   <li><a href="#">Food Processor</a></li>
+			   <li><a href="#">Pop-up Toasters</a></li>
+			   <li><a href="#">Coffee Makers</a></li>
+			   <li><a href="#">Electric Kettle</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Home Shopping Fiesta</a>
+			</li>
+		  </ul>
+	   </li>
+	   <li><a class="arrow">MORE STORES</a>
+	     <ul>
+		    <li><a class="arrow">Sports & Fitness</a>
+			   <ul>
+			     <li><a class="arrow">Team Sports</a>
+			        <ul>
+			        <li><a href="#">Basketball</a></li>
+			        <li><a href="#">Cricket</a></li>
+			        <li><a href="#">Hockey</a></li>
+			        <li><a href="#">VolleyBall</a></li>
+			        <li><a href="#">Other Ball Sports</a></li>
+			        </ul>
+			     </li>
+			     <li><a class="arrow">Indoor Games</a>
+			        <ul>
+			        <li><a href="#">Board Games</a></li>
+			        <li><a href="#">Chess</a></li>
+					<li><a href="#">Darts</a></li>
+			        </ul>
+			     </li>
+				 <li><a class="arrow">Racqet Sports</a>
+				    <ul>
+					<li><a href="#">Badminton</a></li>
+					<li><a href="#">Squash</a></li>
+					<li><a href="#">Table Tennis</a></li>
+					<li><a href="#">Tennis</a></li>
+					</ul>
+				 </li>
+				 <li><a class="arrow">Outdoor Adventure</a>
+				    <ul>
+					<li><a href="#">Camping & Hiking</a></li>
+					<li><a href="#">Cycling</a></li>
+					<li><a href="#">Running</a></li>
+					</ul>
+				 </li>
+				 <li><a class="arrow">Motorsports</a>
+				 </li>
+				 <li><a class="arrow">Other Sports</a>
+				    <ul>
+					<li><a href="#">Boxing</a></li>
+					<li><a href="#">Golf</a></li>
+					<li><a href="#">Skating</a></li>
+					<li><a href="#">Swimming</a></li>
+					</ul>
+				 </li>
+				 <li><a class="arrow">Fitness</a>
+				    <ul>
+					<li><a href="#">Mats</a></li>
+					<li><a href="#">Balls</a></li>
+					<li><a href="#">Fitness Bands</a></li>
+					<li><a href="#">Strength Training</a></li>
+					<li><a href="#">Gloves</a></li>
+					</ul>
+				 </li>
+	          </ul>
+			</li>
+			<li><a class="arrow">Luggage and Travel</a>
+			   <ul>
+			   <li><a href="#">Duffel Bags</a></li>
+			   <li><a href="#">Rucksacks</a></li>
+			   <li><a href="#">Suitcases</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Clocks</a>
+			</li>
+			<li><a class="arrow">Travel accessories</a>
+			</li>
+			<li><a class="arrow">Other accessories</a>
+			   <ul>
+			   <li><a href="#">Cufflins</a></li>
+			   <li><a href="#">Suspenders</a></li>
+			   <li><a href="#">Card Holders</a></li>
+			   </ul>
+			</li>
+			<li><a class="arrow">Posters</a>
+			</li>
+		 </ul>
+	   </li>
+	    </ul>
+		 <!-- TemplateBeginEditable name="EditRegion3" --> <!-- TemplateEndEditable -->
+</body>
+</html>
