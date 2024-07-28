@@ -1,7 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Untitled Document</title>
+<title>Customer Select</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
@@ -22,17 +22,16 @@ echo "Connection Successful<br>";
 $username=$_POST["Username"];
 $password=$_POST["Password"];
 
-mysql_select_db($dbname) or die(mysql_error());
-$sql="SELECT * FROM admin WHERE USERNAME='$username' and PASSWORD='$password'";
+mysql_select_db($dbname) or die(mysql_error())z;
+$sql="SELECT * FROM customer WHERE USERNAME='$username' and PASSWORD='$password'";
 $retval=mysql_query($sql,$con);
 $row=mysql_fetch_array($retval);
 if ( ! $row['FIRST_NAME'])
 echo "LOGIN FAILED";
 else
-{
-     header('Location:/Flamingo.com/Templates/Admin.php');
-} 
+echo "LOGIN SUCCESSFUL"; 
 mysql_close($con);
 ?>
+
 </body>
 </html>

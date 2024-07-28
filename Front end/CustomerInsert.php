@@ -1,17 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Untitled Document</title>
+<title>Customer Insert</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
 <body>
-<php
+<?php
 $host="localhost";
 $username="root";
 $pwd="";
 $dbname="shopping";
 $con=mysql_connect($host,$username,$pwd);
+if(!$con)
+{
+	echo "Connection Failed".mysql_error()."<br>";
+}
+else
+echo "Connection Successful";
+
 $fname=$_POST["firstname"];
 $mname=$_POST["middlename"];
 $lname=$_POST["lastname"];
@@ -25,14 +32,13 @@ $streetname1=$_POST["streetname1"];
 $pin=$_POST["pincode"];
 $city=$_POST["city"];
 $state=$_POST["state"];
-$design=$_POST["designation"];
 $country=$_POST["country"];
 $mobile=$_POST["phoneno"];
 $landline=$_POST["landlineno"];
 $uname=$_POST["username"];
 $password=$_POST["password"];
 mysql_select_db($dbname) or die(mysql_error());
-$sql="INSERT INTO admin(FIRST_NAME,MIDDLE_NAME,LAST_NAME,DAY,MONTH,YEAR,EMAIL_ID,STREET_NO,STREETNAME,STREETNAME1,CITY,STATE,PINCODE,NATIONALITY,MOBILE_NUMBER,LANDLINE_NUMBER,USERNAME,PASSWORD,DESIGNATION)VALUES('$fname','$mname','$lname','$day','$month','$year','$email','$streetno','$streetname','$streetname1','$city','$state',$pin,'$country','$mobile','$landline','$uname','$password','$design')";
+$sql="INSERT INTO customer(FIRST_NAME,MIDDLE_NAME,LAST_NAME,DAY,MONTH,YEAR,STREET_NO,STREETNAME,STREETNAME1,CITY,State,PINCODE,MOBILE_NUMBER,LANDLINE_NUMBER,USERNAME,PASSWORD,EMAIL_ID,NATIONALITY)VALUES('$fname','$mname','$lname','$day','$month','$year','$streetno','$streetname','$streetname1','$city','$state',$pin,'$mobile','$landline','$uname','$password','$email','$country')";
 $retval=mysql_query($sql,$con);
 if(!$retval)
 {
@@ -40,6 +46,7 @@ if(!$retval)
 }
 echo "REGISTRATION SUCCESSFUL";
 mysql_close($con);
->
+?>
 </body>
 </html>
+

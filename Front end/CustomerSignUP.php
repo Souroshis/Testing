@@ -246,7 +246,7 @@
       <p class="style4 style2">&nbsp;</p>
       <p class="style4 style2">LandLine No
         <input type="text" name="landlineno" id="landlineno">
-      (R)</p>
+      </p>
       <hr>
       <p class="style2">&nbsp;</p>
       <p class="style2"><span class="style4"><span class="style5"><span class="style3">Create Your Account Details:-</span></span></span></p>
